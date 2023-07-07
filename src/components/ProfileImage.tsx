@@ -1,7 +1,8 @@
+import { type StaticImport } from "next/dist/shared/lib/get-img-props"
 import Image from "next/image"
 
 type ProfileImageProps = {
-  src?: string | null 
+  src: string  | StaticImport,
   className?: string,
 }
 

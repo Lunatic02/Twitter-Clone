@@ -1,13 +1,9 @@
 import { useSession } from "next-auth/react";
 import Button from "./Button";
 import ProfileImage from "./ProfileImage";
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useState } from "react";
 
-function updateTextAreaSize(textArea?: HTMLTextAreaElement) {
-  if (textArea == null) return;
-  textArea.style.height = "0";
-  textArea.style.height = `${textArea.scrollHeight}px`;
-}
+
 
 export default function NewTweetForm() {
   const session = useSession();
